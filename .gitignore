@@ -1,2 +1,3 @@
 # Does not upload art to git #
 art/
+.DS_Store
