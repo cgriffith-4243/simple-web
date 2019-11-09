@@ -1,0 +1,43 @@
+body{
+	background-color: white;
+}
+header{
+	text-align: center;
+}
+footer{
+	bottom: 0;
+	text-align: center;
+	color: #8E61A9;
+	font-family: serif;
+	font-size: 15px;
+}
+main{
+	text-align: center;
+	color: #8E61A9;
+}
+h1{
+	color: #8E61A9;
+	font-size: 3em;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+nav{
+	word-spacing: 80px;
+	font-family: 'Verdana';
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+a {
+	color: grey;
+	text-decoration: none;
+}
+th {
+	color: #8E61A9;
+	font-family: serif;
+	font-size: 25px;
+	font-weight: 100;
+}
+ul{
+	display:inline-block;
+	text-align:left;
+}
