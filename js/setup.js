@@ -4,36 +4,25 @@ $(document).ready(function(){
 
 
 	function formatCss(version){
-		var fileName = ['normal.css', 'sideBar.css', 'topBar.css'];
+		var fileName = ['normal.css', 'sideBar.css'];
 
 		let cssLink = "./css/" + fileName[version];
-		$('link[href$=".css"]').prop('href', cssLink);
+		$('link[href$="normal.css"]').prop('href', cssLink);
 	}
 
 	function formatHtml(){
 		let header =
 		`<h1>
-			<div>CGriffith Art</div>
-			<img src="./img/stroke.png" alt="stroke" height="150" width="250">
+			<div class="logo">CGriffith Art</div>
 		</h1>
 		<nav>
-			<a href="index.html">home</a>
+			<a href="index.html">welcome</a>
 			<a href="about.html">about</a>
 			<a href="gallery.html">gallery</a>
-			<a href="projects.html">projects</a>
 			<a href="contact.html">contact</a>
-		</nav>
-		<br>
-		Instagram: <a href="https://www.instagram.com/c.griffith.art/?r=nametag">c.griffith.art</a>
-		<br>`;
+		</nav>`;
 
-		let footer = `
-		<pre>
-
-
-
-		</pre>
-		&copy; 2019 Cameron Griffith. All Rights Reserved.`
+		let footer = `&copy; 2019 Cameron Griffith. All Rights Reserved.`
 
 		$("header").html(header);
 		$("footer").html(footer);

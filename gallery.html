@@ -3,19 +3,98 @@
 		<head>
 			<title>Gallery</title>
 			<link rel="stylesheet" href="./css/normal.css">
+			<link rel="stylesheet" href="./css/gallery.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 			<script src="./js/setup.js"></script>
+			<script src="./js/gallery.js"></script>
 			<meta charset="UTF-8">
 		</head>
 		<body>
 			<header></header>
-			<main>
-				<div class="display">
+			<main style="text-align: left;">
+				<h2>Gallery...</h2>
+				<div class="menu" style="text-align: center;">
+					<button class="filter display" id="all" onclick="filterArtMedium('all')">all</button>
+					<button class="filter" id="drawings" onclick="filterArtMedium('drawings')">drawings</button>
+					<button class="filter" id="paintings" onclick="filterArtMedium('paintings')">paintings</button>
+				</div>
+				<div class="wrapper" style="text-align: center;">
+					<div class="gallery" align="center">
+						<div class="tile paintings">
+							<img src="./portfolio/art/painting_mardigras.jpg" onclick="currentSlide(1)">
+						</div>	
+						<div class="tile paintings">
+							<img src="./portfolio/art/painting_eggplant.jpg" onclick="currentSlide(2)">
+						</div>
+						<div class="tile paintings">
+							<img src="./portfolio/art/painting_monk.jpg" onclick="currentSlide(3)">
+						</div>
+						<div class="tile paintings">
+							<img src="./portfolio/art/painting_docs.jpg" onclick="currentSlide(4)">
+						</div>
+						<div class="tile paintings">
+							<img src="./portfolio/art/painting_noir.jpg" onclick="currentSlide(5)">
+						</div>
+						<div class="tile drawings">
+							<img src="./portfolio/art/drawing_dogPerson.jpg" onclick="currentSlide(6)">
+						</div>
+						<div class="tile drawings">
+							<img src="./portfolio/art/drawing_samurai.jpg" onclick="currentSlide(7)">
+						</div>
+						<div class="tile drawings">
+							<img src="./portfolio/art/drawing_serpent.jpg" onclick="currentSlide(8)">
+						</div>
+						<div class="tile drawings">
+							<img src="./portfolio/art/drawing_anatomy.jpg" onclick="currentSlide(9)">
+						</div>
+						<div class="tile drawings">
+							<img src="./portfolio/art/drawing_caesar.jpg" onclick="currentSlide(10)">
+						</div>
+					</div>
+				</div>
+				<div id="modal" style="text-align: center;">
+				  <span class="close cursor" onclick="closeModal()">&times;</span>
+				  <div class="modal-content">
+				  	<div class="slide">
+						<img src="./portfolio/art/painting_mardigras.jpg">
+					</div>	
+					<div class="slide">
+						<img src="./portfolio/art/painting_eggplant.jpg">
+					</div>	
+					<div class="slide">
+						<img src="./portfolio/art/painting_monk.jpg">
+					</div>	
+					<div class="slide">
+						<img src="./portfolio/art/painting_docs.jpg">
+					</div>	
+					<div class="slide">
+						<img src="./portfolio/art/painting_noir.jpg">
+					</div>	
+					<div class="slide">
+						<img src="./portfolio/art/drawing_dogPerson.jpg">
+					</div>	
+					<div class="slide">
+						<img src="./portfolio/art/drawing_samurai.jpg">
+					</div>	
+					<div class="slide">
+						<img src="./portfolio/art/drawing_serpent.jpg">
+					</div>	
+					<div class="slide">
+						<img src="./portfolio/art/drawing_anatomy.jpg">
+					</div>	
+					<div class="slide">
+						<img src="./portfolio/art/drawing_caesar.jpg">
+					</div>
+
+				    <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+				    <a class="next" onclick="nextSlide(1)">&#10095;</a>
+
+				    <div class="caption-container">
+				      <p id="caption"></p>
+				    </div>
+				  </div>
 				</div>
 			</main>
 			<footer></footer>
-			<script type="text/javascript">
-				
-			</script>
 		</body>
 	</html>

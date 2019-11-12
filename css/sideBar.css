@@ -20,7 +20,6 @@ footer{
 	font-size: 12px;
 	width: 250px;
 	position: fixed;
-	z-index: 1;
 	bottom: 0;
 	left: 0;
 	background-color: black;
@@ -40,8 +39,10 @@ h1{
 	color: white;
 }
 h1 div{
-	position: absolute;
 	padding: 10px 30px 10px 10px;
+	background-image: url("../img/stroke.png");
+	background-repeat: no-repeat;
+	background-size: 250px;
 }
 nav{
 	/*
@@ -73,9 +74,10 @@ section figure {
   float: right;
   margin-left:15px;
 }
-figcaption {
-	color: black;
-}
 form {
 	width: 50%;
+}
+img, video {
+  max-width: 100%;
+  vertical-align: middle;
 }
