@@ -20,7 +20,7 @@ Contact page contains the artists contact information. The page includes a form 
 
 extensive use of CSS.
 
-3 unique uses of JavaScript:
+4 unique uses of JavaScript:
 	1. setup of header, footer elements. set up css for each page. (uses jQuery).
 	2. gallery filters for image groups.
 	3. image modals and navigation arrows.
