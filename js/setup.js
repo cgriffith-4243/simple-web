@@ -1,3 +1,4 @@
+//Use 1. Formatting each html file with the same header and footer elements, set up css
 $(document).ready(function(){
 	formatHtml();
 	formatCss(1);

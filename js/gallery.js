@@ -1,3 +1,4 @@
+//Use 2. Filtering images 
 filterArtMedium("all");
 
 function filterArtMedium(medium) {
@@ -20,6 +21,8 @@ function changeButtons(medium){
 	newButton.classList.add("display");
 }
 
+
+//Use 3. Opening modal and navigating slides
 var index = 1;
 openModals(index);
 

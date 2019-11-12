@@ -4,6 +4,34 @@
 			<title>About</title>
 			<link rel="stylesheet" href="./css/normal.css">
 			<link rel="stylesheet" href="./css/gallery.css">
+			<style type="text/css">
+				.container {
+					width: 400px;
+					height: 400px;
+					position: relative;
+					float: right;
+  					margin-left:15px;
+  					margin-right:15px;
+				}
+				.container img{
+					position: absolute;
+					left: 0;
+					margin-top: 10px;
+				}
+				.container button{
+					background-color: darkred;
+					color: white;
+					padding: 8px 10px;
+					border: none;
+					text-decoration: none;
+					cursor: pointer;
+					font-size: 15px;
+				}
+				.container button:hover{
+					background-color: white;
+					color: darkred;
+				}
+			</style>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 			<script src="./js/setup.js"></script>
 			<meta charset="UTF-8">
@@ -13,9 +41,11 @@
 			<main>
 				<article>
 					<section>
-						<figure>
-							<img id="samurai" src="./portfolio/art/drawing_samurai.jpg" alt="samurai" height="480" width="380"  onclick="openModal();currentSlide(1)"><br>
-						</figure>
+						<div class ="container">
+							<button onclick="fade()">Click Me</button> <br>
+							<img id="light" src="./portfolio/art/shadow_skull1.jpg">
+							<img id="dark" src="./portfolio/art/shadow_skull2.jpg" style="opacity: 0;" onclick="openModal();currentSlide(1)">
+						</div>
 						<h2>About me...</h2>
 						<p>Originally from <strong>San Diego, California</strong>, I hope to pursue a career in software development. I am currently a student studying <em>Computer Science</em> and <em>Art</em> at the <strong>University of Denver</strong>, graduating in Spring 2020.</p>
 						<p>I have always had a passion for art and coding. This website is meant as a portfolio to showcase my projects in both fields and as a merging of the two.</p>
@@ -26,13 +56,36 @@
 					<span class="close cursor" onclick="closeModal()">&times;</span>
 					<div class="modal-content">
 				  		<div class="slide">
-							<img src="./portfolio/art/drawing_samurai.jpg">
+							<img src="./portfolio/art/shadow_skull1.jpg">
 						</div>
+						<div class="slide">
+							<img src="./portfolio/art/shadow_skull2.jpg">
+						</div>
+						<a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+				    	<a class="next" onclick="nextSlide(1)">&#10095;</a>
 					</div>
 				</div>
 			</main>
 			<footer></footer>
 			<script type="text/javascript">
+				//Use 4. image animation
+				function fade() {
+					var dark = document.getElementById("dark");
+					var opacity = 0;
+					var goal = 1, direction = 1;
+					var go = setInterval(step, 100);
+					function step() {
+						if (opacity == goal) {
+						  clearInterval(go);
+						} else {
+						  opacity += 0.1 * direction;
+						  dark.style.opacity = opacity;
+						}
+					}
+				}
+
+
+				//Use 3. modals extended
 				var index = 1;
 				openModals(index);
 
