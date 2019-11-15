@@ -5,25 +5,66 @@
 			<link rel="stylesheet" href="./css/normal.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 			<script src="./js/setup.js"></script>
+			<style>
+				.container{
+					position: fixed;
+					width: 70%;
+					height: 100%;
+				}
+				.container fieldset{
+					width: 60%;
+					min-height: 500px;
+					height: 100%;
+				}
+				.container textarea{
+					width: 100%;
+					min-height: 300px;
+				}
+				.container input[type="text"],
+				.container input[type="email"]{
+					min-width: 200px;
+					width: 40%;
+					margin-bottom: 10px;
+				}
+				.container input[type="submit"],
+				.container input[type="reset"]{
+					text-transform: uppercase;
+					background-color: #8B0000;
+					color: #FFFFFF;
+					padding: 4px 5px;
+					border: none;
+					text-decoration: none;
+					cursor: pointer;
+					font-size: 12px;
+					margin-top: 10px;
+				}
+				.container input[type="submit"]:hover,
+				.container input[type="reset"]:hover{
+					background-color: #FFFFFF;
+					color: #8B0000;
+				}
+			</style>
 			<meta charset="UTF-8">
 		</head>
 		<body>
 			<header></header>
 			<main style="text-align: left;">
-				<h2>Contact Me...</h2>
-				<p>Contact me using the form below</p>
-				<p><em>Accepting inquiries about the purchase of original artworks and prints. Not currently accepting commissions or requests for customized art.</em></p>
-				<p>Please check your email is correct before sending your messsage!</p>
-				<form action="/form-handler" method="post">
+				<div class="container">
+					<h2>Contact Me...</h2>
+					<p>Contact me using the form below</p>
+					<p><em>Accepting inquiries about the purchase of original artworks and prints. Not currently accepting commissions or requests for customized art.</em></p>
+					<p>Please check your email is correct before sending your messsage!</p>
+					<form action="/form-handler" method="post">
 					<fieldset>
 						<legend>Send a Message:</legend>
 						Name: <input type="text" id="name"><br>
 						Email: <input type="email" id="text"><br>
 						Message: <br><textarea id="message" name="ta" rows="10" cols="70" placeholder="Send a message..."></textarea><br>
 						Submit: <input type="submit" value="submit"><br>
-						Reset: <input type="reset" value="reset"><br>
+						Reset:  <input type="reset" value="reset"><br>
 					</fieldset>
 				</form>
+				</div>
 			</main>
 			<footer></footer>
 		</body>

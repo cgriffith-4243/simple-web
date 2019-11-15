@@ -38,16 +38,16 @@ img{
   font-size: 12px;
   font-family: 'Verdana';
   text-transform: uppercase;
-  color: grey;
+  color: #808080;
   background-color: transparent;
 }
 
 .filter:hover {
-  color: black;
+  color: #000000;
 }
 
 .filter.display {
-  color: black;
+  color: #000000;
 }
 
 #modal {
@@ -59,7 +59,7 @@ img{
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: #000000;
 }
 
 .modal-content {
@@ -68,7 +68,7 @@ img{
   left: 10%;
   height: 80%;
   width: 80%;
-  background-color: black;
+  background-color: #000000;
 }
 
 .slide {
@@ -85,7 +85,7 @@ img{
 }
 
 .close {
-  color: white;
+  color: #FFFFFF;
   position: absolute;
   top: 10px;
   right: 25px;
@@ -94,7 +94,7 @@ img{
 }
 
 .close:hover, .close:focus {
-  color: darkred;
+  color: #8B0000;
   cursor: pointer;
 }
 
@@ -105,7 +105,7 @@ img{
   padding: 16px;
   margin-top: -50px;
   font-size: 20px;
-  color: white;
+  color: #FFFFFF;
 }
 
 .next {
@@ -118,5 +118,5 @@ img{
 
 .prev:hover,
 .next:hover {
-  background-color: darkred;
+  background-color: #8B0000;
 }

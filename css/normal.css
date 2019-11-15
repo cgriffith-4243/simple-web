@@ -1,5 +1,5 @@
 body{
-	background-color: white;
+	background-color: #FFFFFF;
 }
 header{
 	text-align: center;
@@ -28,6 +28,6 @@ nav{
 	text-transform: uppercase;
 }
 a {
-	color: grey;
+	color: #808080;
 	text-decoration: none;
 }
